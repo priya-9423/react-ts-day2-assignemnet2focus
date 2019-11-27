@@ -7,7 +7,7 @@ export default class Hello extends PureComponent{
   {
     super(props);
     this.state = {
-      textValue : ""
+      textValue : "sddff"
     }
     this.CopyText = this.CopyText.bind(this)
 
@@ -25,7 +25,7 @@ render()
 {
   return (
     <div>
-    <input type="text" onChange = {this.CopyText} name= "textBox" />
+    <input type="text" onChange = {this.CopyText} name= "textBox" value = {this.state.textValue} />
     <button> Click </button>
     <div>
     {this.state.textValue}
