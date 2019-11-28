@@ -13,6 +13,8 @@ export default class Hello extends PureComponent{
     this.inputHandler = React.createRef();
 
     this.onbuttonClick = this.onbuttonClick.bind(this);
+
+    let callBackRef;
   }
 
 CopyText(e)
@@ -26,6 +28,8 @@ textValue : e.target.value,
 onbuttonClick()
 {
   this.inputHandler.current.focus();
+  
+  this.callBackRef.focus()
 }
 
 render()
@@ -35,6 +39,8 @@ render()
     First Name:  <input type="text" onChange = {this.CopyText} name= "textBox" value = {this.state.textValue} />
     
     Name: <input type="text" name= "textBox" ref = {this.inputHandler}  />
+
+    CallBack Name: <input type="text" name= "textBox" ref = {(handle) => this.callBackRef = handle}  />
 
     <button onClick = {this.onbuttonClick}> Click </button>
     {
